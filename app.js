@@ -35,7 +35,7 @@ app.use(function(req, res, next) {
 
 
 // Habilitar cors (DE MANERA LIMITADA)
-const whitelist = ['IP'];
+const whitelist = ['https://tematicajv.mvv.com.co'];
 const corsOptions = {
     origin: (origin, callback) => {
 
@@ -50,10 +50,10 @@ const corsOptions = {
 }
 
 // Esta limita el acceso
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 // Esta es abierta para todo el mundo.
-app.use(cors());
+// app.use(cors());
 
 
 
